@@ -10,7 +10,11 @@ $last_login='2020.02.01';
 $is_delete='0';
 
 #0 for not deleted and 1 for deleted
+$hashed_password = sha1($password);
+#used sha1 to store password as encrypted one in db
 
+echo($hashed_password);
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
