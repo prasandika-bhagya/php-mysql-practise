@@ -6,14 +6,23 @@ $first_name ='Bhagya';
 $last_name='Prasandika';
 $email='prasandikabhagya@gmail.com';
 $password='abcd1234';
-$last_login='2020.02.01';
 $is_delete='0';
 
 #0 for not deleted and 1 for deleted
 $hashed_password = sha1($password);
 #used sha1 to store password as encrypted one in db
 
-echo($hashed_password);
+$query = "INSERT INTO user(first_name,last_name,email,password,is_delete) VALUES ('{$first_name}','{$last_name}','{$email}','{$password}','{$is_delete}')";
+
+$result=mysqli_query($connection,$query);
+
+if($result){
+    echo "added";
+}
+else{
+    echo "error";
+}
+
 ?> 
 
 <!DOCTYPE html>
