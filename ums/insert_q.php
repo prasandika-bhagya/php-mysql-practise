@@ -1,9 +1,16 @@
 <?php require_once('inc/connection.php');?>
 
-<php 
+<?php 
 
+$first_name ='Bhagya';
+$last_name='Prasandika';
+$email='prasandikabhagya@gmail.com';
+$password='abcd1234';
+$last_login='2020.02.01';
+$is_delete='0';
 
-?>
+#0 for not deleted and 1 for deleted
+
 
 <!DOCTYPE html>
 <html lang="en">
