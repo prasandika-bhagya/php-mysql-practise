@@ -2,17 +2,17 @@
 
 <?php 
 
-$first_name ='Bhagya';
-$last_name='Prasandika';
-$email='prasandikabhagya@gmail.com';
-$password='abcd1234';
-$is_delete='0';
+$first_name ='Viraj';
+$last_name='Lakshitha';
+$email='vitiya@gmail.com';
+$password='abcs234';
+$is_delete='1';
 
 #0 for not deleted and 1 for deleted
 $hashed_password = sha1($password);
 #used sha1 to store password as encrypted one in db
 
-$query = "INSERT INTO user(first_name,last_name,email,password,is_delete) VALUES ('{$first_name}','{$last_name}','{$email}','{$password}','{$is_delete}')";
+$query = "INSERT INTO user(first_name,last_name,email,password,is_delete) VALUES ('{$first_name}','{$last_name}','{$email}','{$hashed_password}','{$is_delete}')";
 
 $result=mysqli_query($connection,$query);
 
