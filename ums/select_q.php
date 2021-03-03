@@ -25,13 +25,14 @@ if(resul_t){
 
 //can do same thing by while loop
 $table ='<table>';
-$table .= '<tr><th>First Name</th><th>Last Name</th><th>Email</th></tr>';
+$table .= '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th></tr>';
 
 while($records=mysqli_fetch_assoc($resul_t)){
-   // echo $records['first_name'] . "<br>". "<br>";
+   echo $records['first_name'] . "<br>". "<br>";
     
 
     $table .= '<tr>';
+    $table .= '<td>' . $records['id'] .'</td>';
     $table .= '<td>' . $records['first_name'] .'</td>';
     $table .= '<td>' . $records['last_name'] .'</td>';
     $table .= '<td>' . $records['email'] .'</td>';
