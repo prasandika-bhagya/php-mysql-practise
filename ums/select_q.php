@@ -1,5 +1,21 @@
 <?php require_once('inc/connection.php');?>
 
+<?php
+
+$query="SELECT * FROM user";
+
+$resul_t = mysqli_query($connection,$query);
+if(resul_t){
+    echo mysqli_num_rows($resul_t) ." Records found"."<hr>";
+
+// $records= mysqli_fetch_assoc($resul_t);
+// echo "<pre>";
+// print_r($records);
+// echo "</pre>";
+
+// $records= mysqli_fetch_assoc($resul_t);
+// echo "<pre>";
+// print_r($records);
 // echo "</pre>";
 
 // $records= mysqli_fetch_assoc($resul_t);
